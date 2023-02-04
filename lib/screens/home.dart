@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:math_quiz/screens/question.dart';
 
+import '../constants/questions.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -21,7 +23,8 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, QuestionScreen.routeName);
+                  Navigator.pushNamed(context, QuestionScreen.routeName,
+                      arguments: {"questionNumber": 0, "questions": questions});
                 },
                 child: const Text('Play Now'),
               ),
