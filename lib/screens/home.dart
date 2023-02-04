@@ -4,6 +4,7 @@ import 'package:math_quiz/screens/question.dart';
 import '../constants/questions.dart';
 
 class HomePage extends StatelessWidget {
+  static const routeName = '/home';
   const HomePage({super.key});
 
   @override

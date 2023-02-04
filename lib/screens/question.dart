@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:math_quiz/constants/questions.dart';
+import 'package:math_quiz/screens/home.dart';
 
 class QuestionScreen extends StatefulWidget {
   static const routeName = "/question";
@@ -104,7 +105,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     ))),
             const SizedBox(height: 20),
             ElevatedButton(
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () =>
+                    Navigator.of(context).pushNamed(HomePage.routeName),
                 child: const Text("Play Again"))
           ],
         ),
